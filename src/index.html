@@ -1,724 +1,830 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko-KR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>해커톤 템플릿 프로젝트 오목게임</title>
-  <link rel="stylesheet" href="index.scss">
+  <title>패스트캠퍼스 해커톤 오목</title>
+  <link rel="stylesheet" href="style2.css">
 </head>
+
 <body>
-  <h1>Omok</h1>
-  <div class="board">
-    <div class="row-1 row">
-      <div class="col-1 col black">
-        <div class="col__grid"></div>
+  <div class="container">
+    <div class="display-board">
+      <h1 class="game-title">Omock</h1>
+      <div class="turn">
+        <div class="white-turn"></div>
+        <div class="black-turn"></div>
       </div>
-      <div class="col-2 col white">
-        <div class="col__grid"></div>
+      <div class="timers">
+        <span class="white-timer">00:00</span>
+        <span class="black-timer">00:00</span>
       </div>
-      <div class="col-3 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-4 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-5 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-6 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-7 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-8 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-9 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-10 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-11 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-12 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-13 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-14 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-15 col">
-        <div class="col__grid"></div>
+      <div class="btns">
+        <button class="startBtn">GAME START</button>
       </div>
     </div>
-    <div class="row-2 row">
-      <div class="col-1 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-2 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-3 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-4 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-5 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-6 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-7 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-8 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-9 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-10 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-11 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-12 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-13 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-14 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-15 col">
-        <div class="col__grid"></div>
+    <div class="omok-board">
+      <div class="board">
+        <div class="row-1 row">
+          <div class="col-1 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-2 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-3 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-4 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-5 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-6 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-7 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-8 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-9 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-10 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-11 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-12 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-13 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-14 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-15 col">
+            <div class="col__grid"></div>
+          </div>
+        </div>
+        <div class="row-2 row">
+          <div class="col-1 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-2 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-3 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-4 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-5 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-6 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-7 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-8 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-9 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-10 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-11 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-12 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-13 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-14 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-15 col">
+            <div class="col__grid"></div>
+          </div>
+        </div>
+        <div class="row-3 row">
+          <div class="col-1 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-2 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-3 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-4 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-5 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-6 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-7 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-8 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-9 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-10 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-11 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-12 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-13 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-14 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-15 col">
+            <div class="col__grid"></div>
+          </div>
+        </div>
+        <div class="row-4 row">
+          <div class="col-1 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-2 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-3 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-4 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-5 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-6 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-7 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-8 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-9 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-10 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-11 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-12 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-13 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-14 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-15 col">
+            <div class="col__grid"></div>
+          </div>
+        </div>
+        <div class="row-5 row">
+          <div class="col-1 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-2 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-3 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-4 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-5 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-6 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-7 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-8 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-9 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-10 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-11 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-12 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-13 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-14 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-15 col">
+            <div class="col__grid"></div>
+          </div>
+        </div>
+        <div class="row-6 row">
+          <div class="col-1 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-2 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-3 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-4 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-5 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-6 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-7 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-8 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-9 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-10 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-11 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-12 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-13 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-14 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-15 col">
+            <div class="col__grid"></div>
+          </div>
+        </div>
+        <div class="row-7 row">
+          <div class="col-1 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-2 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-3 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-4 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-5 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-6 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-7 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-8 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-9 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-10 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-11 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-12 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-13 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-14 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-15 col">
+            <div class="col__grid"></div>
+          </div>
+        </div>
+        <div class="row-8 row">
+          <div class="col-1 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-2 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-3 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-4 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-5 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-6 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-7 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-8 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-9 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-10 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-11 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-12 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-13 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-14 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-15 col">
+            <div class="col__grid"></div>
+          </div>
+        </div>
+        <div class="row-9 row">
+          <div class="col-1 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-2 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-3 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-4 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-5 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-6 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-7 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-8 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-9 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-10 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-11 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-12 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-13 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-14 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-15 col">
+            <div class="col__grid"></div>
+          </div>
+        </div>
+        <div class="row-10 row">
+          <div class="col-1 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-2 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-3 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-4 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-5 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-6 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-7 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-8 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-9 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-10 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-11 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-12 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-13 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-14 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-15 col">
+            <div class="col__grid"></div>
+          </div>
+        </div>
+        <div class="row-11 row">
+          <div class="col-1 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-2 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-3 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-4 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-5 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-6 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-7 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-8 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-9 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-10 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-11 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-12 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-13 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-14 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-15 col">
+            <div class="col__grid"></div>
+          </div>
+        </div>
+        <div class="row-12 row">
+          <div class="col-1 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-2 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-3 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-4 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-5 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-6 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-7 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-8 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-9 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-10 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-11 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-12 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-13 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-14 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-15 col">
+            <div class="col__grid"></div>
+          </div>
+        </div>
+        <div class="row-13 row">
+          <div class="col-1 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-2 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-3 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-4 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-5 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-6 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-7 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-8 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-9 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-10 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-11 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-12 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-13 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-14 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-15 col">
+            <div class="col__grid"></div>
+          </div>
+        </div>
+        <div class="row-14 row">
+          <div class="col-1 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-2 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-3 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-4 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-5 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-6 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-7 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-8 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-9 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-10 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-11 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-12 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-13 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-14 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-15 col">
+            <div class="col__grid"></div>
+          </div>
+        </div>
+        <div class="row-15 row">
+          <div class="col-1 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-2 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-3 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-4 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-5 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-6 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-7 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-8 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-9 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-10 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-11 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-12 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-13 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-14 col">
+            <div class="col__grid"></div>
+          </div>
+          <div class="col-15 col">
+            <div class="col__grid"></div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row-3 row">
-      <div class="col-1 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-2 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-3 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-4 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-5 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-6 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-7 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-8 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-9 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-10 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-11 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-12 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-13 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-14 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-15 col">
-        <div class="col__grid"></div>
-      </div>
-    </div>
-    <div class="row-4 row">
-      <div class="col-1 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-2 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-3 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-4 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-5 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-6 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-7 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-8 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-9 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-10 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-11 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-12 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-13 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-14 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-15 col">
-        <div class="col__grid"></div>
-      </div>
-    </div>
-    <div class="row-5 row">
-      <div class="col-1 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-2 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-3 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-4 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-5 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-6 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-7 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-8 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-9 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-10 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-11 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-12 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-13 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-14 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-15 col">
-        <div class="col__grid"></div>
-      </div>
-    </div>
-    <div class="row-6 row">
-      <div class="col-1 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-2 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-3 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-4 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-5 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-6 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-7 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-8 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-9 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-10 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-11 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-12 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-13 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-14 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-15 col">
-        <div class="col__grid"></div>
-      </div>
-    </div>
-    <div class="row-7 row">
-      <div class="col-1 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-2 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-3 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-4 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-5 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-6 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-7 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-8 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-9 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-10 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-11 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-12 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-13 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-14 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-15 col">
-        <div class="col__grid"></div>
-      </div>
-    </div>
-    <div class="row-8 row">
-      <div class="col-1 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-2 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-3 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-4 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-5 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-6 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-7 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-8 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-9 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-10 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-11 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-12 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-13 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-14 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-15 col">
-        <div class="col__grid"></div>
-      </div>
-    </div>
-    <div class="row-9 row">
-      <div class="col-1 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-2 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-3 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-4 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-5 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-6 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-7 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-8 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-9 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-10 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-11 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-12 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-13 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-14 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-15 col">
-        <div class="col__grid"></div>
-      </div>
-    </div>
-    <div class="row-10 row">
-      <div class="col-1 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-2 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-3 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-4 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-5 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-6 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-7 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-8 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-9 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-10 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-11 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-12 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-13 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-14 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-15 col">
-        <div class="col__grid"></div>
-      </div>
-    </div>
-    <div class="row-11 row">
-      <div class="col-1 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-2 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-3 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-4 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-5 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-6 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-7 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-8 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-9 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-10 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-11 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-12 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-13 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-14 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-15 col">
-        <div class="col__grid"></div>
-      </div>
-    </div>
-    <div class="row-12 row">
-      <div class="col-1 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-2 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-3 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-4 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-5 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-6 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-7 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-8 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-9 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-10 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-11 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-12 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-13 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-14 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-15 col">
-        <div class="col__grid"></div>
-      </div>
-    </div>
-    <div class="row-13 row">
-      <div class="col-1 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-2 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-3 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-4 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-5 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-6 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-7 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-8 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-9 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-10 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-11 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-12 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-13 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-14 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-15 col">
-        <div class="col__grid"></div>
-      </div>
-    </div>
-    <div class="row-14 row">
-      <div class="col-1 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-2 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-3 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-4 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-5 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-6 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-7 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-8 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-9 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-10 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-11 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-12 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-13 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-14 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-15 col">
-        <div class="col__grid"></div>
-      </div>
-    </div>
-    <div class="row-15 row">
-      <div class="col-1 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-2 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-3 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-4 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-5 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-6 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-7 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-8 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-9 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-10 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-11 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-12 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-13 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-14 col">
-        <div class="col__grid"></div>
-      </div>
-      <div class="col-15 col">
-        <div class="col__grid"></div>
-      </div>
-    </div>
-  </div>
-  <script src="./index.js"></script>
+    <script>
+      const startBtnEl = document.querySelector('.startBtn');
+
+      const whiteTimerEl = document.querySelector('.white-timer');
+      const blackTimerEl = document.querySelector('.black-timer');
+
+      const omok = [
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      ]
+      let flag = false;
+      const init = () => {
+        document.querySelectorAll('.col').forEach(el => {
+          el.addEventListener('click', e => {
+            let row = Array.from(el.closest('.row').classList)[0].split('-')[1];
+            let col = Array.from(el.classList)[0].split('-')[1];
+            if (el.classList.contains('white') || el.classList.contains('black')) return;
+            el.classList.add(flag ? 'black' : 'white');
+            omok[row - 1][col - 1] = flag ? 1 : 2;
+            if (checkOmok(omok, flag ? 1 : 2)) {
+              setTimeout(() => {
+                alert('오목입니다.')
+              }, 200)
+            }
+            flag = !flag;
+          })
+        })
+      }
+      const checkOmok = (omok, type) => {
+        let leftCross = 0, rightCross = 0, leftReverse = 0, rightReverse = 0
+        for (let i = 0; i < omok.length; i++) {
+          let horizon = vertical = 0;
+          for (let j = 0; j < omok.length; j++) {
+            if (omok[i][j] === type) {
+              horizon++;
+            } else {
+              horizon = 0;
+            }
+            if (omok[j][i] === type) {
+              vertical++;
+            } else {
+              vertical = 0;
+            }
+            if (horizon === 5 || vertical === 5) {
+              return true;
+            }
+            if (i + j < omok.length && omok[j][i + j] === type) {
+              leftCross++;
+            } else {
+              leftCross = 0;
+            }
+            if (i + j < omok.length && omok[i + j][j] === type) {
+              rightCross++;
+            } else {
+              rightCross = 0;
+            }
+            if (leftCross === 5 || rightCross === 5) {
+              return true;
+            }
+            if (i + j < omok.length && omok[omok.length - 1 - j][i + j] === type) {
+              leftReverse++;
+            } else {
+              leftReverse = 0;
+            }
+            if (i + j < omok.length && omok[omok.length - 1 - (i + j)][j] === type) {
+              rightReverse++;
+            } else {
+              rightReverse = 0;
+            }
+            if (leftReverse === 5 || rightReverse === 5) {
+              return true;
+            }
+          }
+        }
+        return false;
+      }
+      init();
+    </script>
 </body>
-<footer>
-<p>made by JW,JH,Romi</p>
-</footer>
+
 </html>
