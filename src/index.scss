@@ -22,14 +22,14 @@
 
 .col::before {
   display: block;
-  content: '';
+  content: "";
   padding-bottom: 100%;
 }
 
 .col::after {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   padding-bottom: 80%;
   width: 80%;
   top: 10%;
@@ -47,14 +47,20 @@
 
 .col__grid {
   position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .col__grid::after {
   display: block;
-  content: '';
+  content: "";
   position: absolute;
-  top: 0; right: calc(50% - 1px); bottom: calc(50% - 1px); left: 0;
+  top: 0;
+  right: calc(50% - 1px);
+  bottom: calc(50% - 1px);
+  left: 0;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
   box-sizing: border-box;
@@ -62,9 +68,12 @@
 
 .col__grid::before {
   display: block;
-  content: '';
+  content: "";
   position: absolute;
-  top: calc(50%); right: -1px; bottom: -1px; left: calc(50% );
+  top: calc(50%);
+  right: -1px;
+  bottom: -1px;
+  left: calc(50%);
   border-top: 1px solid black;
   border-left: 1px solid black;
   box-sizing: border-box;
@@ -92,4 +101,93 @@
   border-top: none;
   border-bottom: none;
   border-right: none;
+}
+
+/* 내가 만든 스타일 */
+/* 전체적인 레이아웃 */
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 500px auto;
+  grid-template-columns: auto 500px 300px auto;
+  text-align: center;
+}
+
+/*  */
+.game-title {
+  font-family: "Righteous", cursive;
+  font-size: 6rem;
+  padding: 1rem 0;
+  height: 95px;
+}
+
+.display-board {
+  grid-row: 2 / span 1;
+  grid-column: 3;
+  border: 1px solid brown;
+}
+
+.omok-board {
+  grid-row: 2 / span 1;
+  grid-column: 2;
+}
+
+.turn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.white-turn,
+.black-turn {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  margin: 1rem;
+}
+
+.white-turn {
+  background-color: #fff;
+  border: 1px solid black;
+}
+
+.black-turn {
+  background-color: #000;
+  border: 1px solid black;
+}
+
+.timers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+.white-timer,
+.black-timer {
+  font-size: 3rem;
+  padding: 0 1rem;
+}
+
+.btns {
+  height: calc(100% - 235px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.startBtn {
+  width: 280px;
+  font-size: 4rem;
+  background-color: #181818;
+  color: #fff;
+  border-radius: 10px;
+  padding: 0.5rem 1.5rem;
+}
+
+.your-turn {
+  border-style: solid;
+  border-image: linear-gradient(to right, #01c9ca 0%, #3886ff 100%);
+  border-image-slice: 1;
+  border-image-width: 3px;
 }
