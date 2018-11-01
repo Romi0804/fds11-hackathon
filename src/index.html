@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>패스트캠퍼스 해커톤 오목</title>
-  <link rel="stylesheet" href="style2.css">
+  <title>오목</title>
+  <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
   <div class="container">
     <div class="display-board">
-      <h1 class="game-title">Omock</h1>
+      <h1 class="game-title">Omok</h1>
       <div class="turn">
         <div class="white-turn"></div>
         <div class="black-turn"></div>
@@ -22,7 +22,8 @@
         <span class="black-timer">00:00</span>
       </div>
       <div class="btns">
-        <button class="startBtn">GAME START</button>
+        <button class="startBtn show">GAME START</button>
+        <button class="resetBtn">RESTART</button>
       </div>
     </div>
     <div class="omok-board">
@@ -734,96 +735,96 @@
         </div>
       </div>
     </div>
-    <script>
-      const startBtnEl = document.querySelector('.startBtn');
+    <script src="./index.js">
+      // const startBtnEl = document.querySelector('.startBtn');
 
-      const whiteTimerEl = document.querySelector('.white-timer');
-      const blackTimerEl = document.querySelector('.black-timer');
+      // const whiteTimerEl = document.querySelector('.white-timer');
+      // const blackTimerEl = document.querySelector('.black-timer');
 
-      const omok = [
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-      ]
-      let flag = false;
-      const init = () => {
-        document.querySelectorAll('.col').forEach(el => {
-          el.addEventListener('click', e => {
-            let row = Array.from(el.closest('.row').classList)[0].split('-')[1];
-            let col = Array.from(el.classList)[0].split('-')[1];
-            if (el.classList.contains('white') || el.classList.contains('black')) return;
-            el.classList.add(flag ? 'black' : 'white');
-            omok[row - 1][col - 1] = flag ? 1 : 2;
-            if (checkOmok(omok, flag ? 1 : 2)) {
-              setTimeout(() => {
-                alert('오목입니다.')
-              }, 200)
-            }
-            flag = !flag;
-          })
-        })
-      }
-      const checkOmok = (omok, type) => {
-        let leftCross = 0, rightCross = 0, leftReverse = 0, rightReverse = 0
-        for (let i = 0; i < omok.length; i++) {
-          let horizon = vertical = 0;
-          for (let j = 0; j < omok.length; j++) {
-            if (omok[i][j] === type) {
-              horizon++;
-            } else {
-              horizon = 0;
-            }
-            if (omok[j][i] === type) {
-              vertical++;
-            } else {
-              vertical = 0;
-            }
-            if (horizon === 5 || vertical === 5) {
-              return true;
-            }
-            if (i + j < omok.length && omok[j][i + j] === type) {
-              leftCross++;
-            } else {
-              leftCross = 0;
-            }
-            if (i + j < omok.length && omok[i + j][j] === type) {
-              rightCross++;
-            } else {
-              rightCross = 0;
-            }
-            if (leftCross === 5 || rightCross === 5) {
-              return true;
-            }
-            if (i + j < omok.length && omok[omok.length - 1 - j][i + j] === type) {
-              leftReverse++;
-            } else {
-              leftReverse = 0;
-            }
-            if (i + j < omok.length && omok[omok.length - 1 - (i + j)][j] === type) {
-              rightReverse++;
-            } else {
-              rightReverse = 0;
-            }
-            if (leftReverse === 5 || rightReverse === 5) {
-              return true;
-            }
-          }
-        }
-        return false;
-      }
-      init();
+      // const omok = [
+      //   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      //   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      //   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      //   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      //   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      //   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      //   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      //   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      //   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      //   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      //   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      //   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      //   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      //   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      //   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      // ]
+      // let flag = false;
+      // const init = () => {
+      //   document.querySelectorAll('.col').forEach(el => {
+      //     el.addEventListener('click', e => {
+      //       let row = Array.from(el.closest('.row').classList)[0].split('-')[1];
+      //       let col = Array.from(el.classList)[0].split('-')[1];
+      //       if (el.classList.contains('white') || el.classList.contains('black')) return;
+      //       el.classList.add(flag ? 'black' : 'white');
+      //       omok[row - 1][col - 1] = flag ? 1 : 2;
+      //       if (checkOmok(omok, flag ? 1 : 2)) {
+      //         setTimeout(() => {
+      //           alert('오목입니다.')
+      //         }, 200)
+      //       }
+      //       flag = !flag;
+      //     })
+      //   })
+      // }
+      // const checkOmok = (omok, type) => {
+      //   let leftCross = 0, rightCross = 0, leftReverse = 0, rightReverse = 0
+      //   for (let i = 0; i < omok.length; i++) {
+      //     let horizon = vertical = 0;
+      //     for (let j = 0; j < omok.length; j++) {
+      //       if (omok[i][j] === type) {
+      //         horizon++;
+      //       } else {
+      //         horizon = 0;
+      //       }
+      //       if (omok[j][i] === type) {
+      //         vertical++;
+      //       } else {
+      //         vertical = 0;
+      //       }
+      //       if (horizon === 5 || vertical === 5) {
+      //         return true;
+      //       }
+      //       if (i + j < omok.length && omok[j][i + j] === type) {
+      //         leftCross++;
+      //       } else {
+      //         leftCross = 0;
+      //       }
+      //       if (i + j < omok.length && omok[i + j][j] === type) {
+      //         rightCross++;
+      //       } else {
+      //         rightCross = 0;
+      //       }
+      //       if (leftCross === 5 || rightCross === 5) {
+      //         return true;
+      //       }
+      //       if (i + j < omok.length && omok[omok.length - 1 - j][i + j] === type) {
+      //         leftReverse++;
+      //       } else {
+      //         leftReverse = 0;
+      //       }
+      //       if (i + j < omok.length && omok[omok.length - 1 - (i + j)][j] === type) {
+      //         rightReverse++;
+      //       } else {
+      //         rightReverse = 0;
+      //       }
+      //       if (leftReverse === 5 || rightReverse === 5) {
+      //         return true;
+      //       }
+      //     }
+      //   }
+      //   return false;
+      // }
+      // init();
     </script>
 </body>
 
